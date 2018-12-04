@@ -1,6 +1,4 @@
-GET https://api.darksky.net/forecast/0123456789abcdef9876543210fedcba/42.3601,-71.0589
-  
-{
+ {
   "latitude": 47.8209301,
   "longitude": -122.3151314,
   "timezone": "America/Pacific",
