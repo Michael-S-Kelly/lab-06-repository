@@ -61,8 +61,8 @@ function searchWeather(query) {
 }
 
 function Weather(data) {
-  this.forecast = data.summary;
-  this.current_time = data.time;
+  this.forecast = data.curently.summary;
+  this.current_time = data.curently.time;
 }
 
 // app.get('/weather', (request, response) => {
