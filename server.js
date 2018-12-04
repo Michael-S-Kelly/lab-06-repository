@@ -20,6 +20,8 @@ app.use(cors());
 //   response.json(animal);
 // });
 
+// -------------LOCATION -----------------
+
 app.get('/location', (request, response) => {
   console.log('my request object:', request);
   const locationData = searchToLatLong(request.query.data);
@@ -40,6 +42,29 @@ function Location(data) {
   this.latitude = data.geometry.location.lat;
   this.longitude = data.geometry.location.lng;
 }
+
+// -------------WEATHER------------
+
+app.get('/weather', (request, response) => {
+  console.log('my request object:', request);
+  const weatherData = searchWeather(request.query.data);
+  response.send(weatherData);
+});
+
+// helper function goes here
+function searchWeather(query) {
+  const weatherData = require('./data/dark.json');
+  const weather = new Weather(weatherData.results[0]);
+  weather.search_query = query;
+  return weather;
+}
+
+function Weather(data) {
+  this.minutely_weather = data.minutely.summary;
+  this.time = data.currently.time;
+}
+
+// -------------------------------------
 
 app.listen(PORT, () => {
   console.log(`listening on ${PORT}`);
