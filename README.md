@@ -16,26 +16,26 @@ Estimate of time needed to complete: 30 min
 
 Start time: 0932
 
-Finish time: _____
+Finish time: 1030 - unsure on front end deployment to Heroku at this time
 
-Actual time needed to complete: _____
+Actual time needed to complete: 88min
 ---------------------------------
 Number and name of feature: Obtain latitude and longitude
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 1 hour
 
-Start time: _____
+Start time: 1035
 
-Finish time: _____
+Finish time: 1100
 
-Actual time needed to complete: _____
+Actual time needed to complete: 25min
 
 ---------------------------------
 Number and name of feature: Retrieve weather information
 
-Estimate of time needed to complete: _____
+Estimate of time needed to complete: 90min
 
-Start time: _____
+Start time: 1115
 
 Finish time: _____
 
