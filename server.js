@@ -62,6 +62,8 @@ function searchWeather(query) {
 function Weather(data) {
   this.minutely_weather = data.minutely.summary;
   this.time = data.currently.time;
+  this.time.toUTCString;
+
 }
 
 // -------------------------------------
