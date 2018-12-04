@@ -60,9 +60,9 @@ function searchWeather(query) {
 }
 
 function Weather(data) {
-  this.minutely_weather = data.minutely.summary;
+  this.minutely_weather = data.currently.summary;
   this.time = data.currently.time;
-  this.time.toUTCString;
+  this.time.toUTCString();
 
 }
 
