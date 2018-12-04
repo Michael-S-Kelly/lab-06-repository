@@ -19,6 +19,7 @@ app.use(cors());
 //   let animal = { type: 'turtle', name: 'tim' };
 //   response.json(animal);
 // });
+// geo.json
 
 // -------------LOCATION -----------------
 
