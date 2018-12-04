@@ -55,17 +55,36 @@ app.get('/weather', (request, response) => {
 // helper function goes here
 function searchWeather(query) {
   const weatherData = require('./data/dark.json');
-  const weather = new Weather(weatherData.results[0]);
+  const weather = new Weather(weatherData.currently);
   weather.search_query = query;
   return weather;
 }
 
 function Weather(data) {
-  this.minutely_weather = data.currently.summary;
-  this.time = data.currently.time;
-  this.time.toUTCString();
-
+  this.forecast = data.summary;
+  this.current_time = data.time;
 }
+
+// app.get('/weather', (request, response) => {
+//   console.log('my request object:', request);
+//   const weatherData = searchWeather(request.query.data);
+//   response.send(weatherData);
+// });
+
+// // helper function goes here
+// function searchWeather(query) {
+//   const weatherData = require('./data/dark.json');
+//   const weather = new Weather(weatherData.results[0]);
+//   weather.search_query = query;
+//   return weather;
+// }
+
+// function Weather(data) {
+//   this.minutely_weather = data.currently.summary;
+//   this.time = data.currently.time;
+//   this.time.toUTCString();
+
+// }
 
 // -------------------------------------
 
